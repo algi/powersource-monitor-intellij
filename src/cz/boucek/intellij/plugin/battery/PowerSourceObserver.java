@@ -12,7 +12,7 @@ import java.util.concurrent.Executor;
 
 /**
  * Monitor for observing power source changes using JNI. Requiers native library
- * <code>{@value #LIBRARY_NAME}.jnilib</code> on classpath.
+ * <code>{@value #LIBRARY_NAME}.dylib</code> on classpath.
  *
  * <p>
  *     <em>Implementation note:</em> The only required native method is <code>void registerMonitor()</code>
@@ -29,8 +29,8 @@ public class PowerSourceObserver {
 	private static final String LIBRARY_NAME = "BatteryWatcher";
 	private static PowerSourceObserver INSTANCE;
 
-	private boolean monitorRunning;
 	private PowerSource oldValue;
+	private boolean monitorRunning;
 	private final List<PowerSourceListener> listeners;
 
 	/**
@@ -59,7 +59,6 @@ public class PowerSourceObserver {
 	 */
 	public static PowerSourceObserver getInstance() {
 		if (INSTANCE == null) {
-			System.out.println("creating new instance.");
 			INSTANCE = new PowerSourceObserver();
 		}
 

@@ -21,7 +21,7 @@ public class PowerSourceMonitorPlugin implements ApplicationComponent {
 
 	@Override
 	public void initComponent() {
-		// TODO knihovna je prozatím umístěná v ~/Library/Java/Extensions/libBatteryWatcher.dylib
+		// TODO library must be placed in ~/Library/Java/Extensions/libBatteryWatcher.dylib
 
 		// setup listeners and register for system events
 		PowerSourceObserver.getInstance().addListener(new PowerSafeModeListener());

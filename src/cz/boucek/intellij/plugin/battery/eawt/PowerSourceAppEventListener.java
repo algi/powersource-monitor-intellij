@@ -4,7 +4,7 @@ import com.apple.eawt.*;
 import cz.boucek.intellij.plugin.battery.PowerSourceObserver;
 
 /**
- * Apple system event listener.
+ * Application event adapter for capturing user session, screen sleep and system sleep events.
  *
  * @author Marian Bouček
  */
