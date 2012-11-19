@@ -1,0 +1,27 @@
+<idea-plugin version="2">
+  <name>Power Source Monitor</name>
+  <description>Watches your power source and automaticly switch Power Safe Mode on and off.</description>
+  <version>1.0</version>
+  <vendor>Marian Bouček</vendor>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="107.105"/>
+
+  <application-components>
+	  <component>
+		  <implementation-class>cz.boucek.intellij.plugin.battery.plugin.PowerSourceMonitorPlugin</implementation-class>
+	  </component>
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+</idea-plugin>
